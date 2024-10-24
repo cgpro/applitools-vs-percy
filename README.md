@@ -30,6 +30,14 @@ This project demonstrates key differences between Applitools and Percy:
 
 ## Running the Tests
 
+Dont forget to set your API keys in the .env file.
+
+```bash
+# .env
+APPLITOOLS_API_KEY=...
+PERCY_TOKEN=...
+```
+
 ```bash
 # Install dependencies
 pnpm install
