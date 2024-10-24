@@ -1,0 +1,143 @@
+.ab-test-component {
+  .header {
+    margin-bottom: var(--spacing-lg);
+
+    h2 {
+      color: var(--text-color);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .description {
+      color: var(--text-color);
+      font-size: var(--font-size-md);
+    }
+  }
+
+  .examples {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+
+    .example-card {
+      background: white;
+      border-radius: var(--border-radius-md);
+      padding: var(--spacing-md);
+      box-shadow: var(--shadow-sm);
+
+      h3 {
+        margin-bottom: var(--spacing-md);
+        padding-bottom: var(--spacing-sm);
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .variant-container {
+        display: flex;
+        gap: var(--spacing-md);
+        margin: var(--spacing-md) 0;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
+      }
+
+      .variant {
+        flex: 1;
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius-sm);
+        transition: transform var(--transition-normal);
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+
+        h4 {
+          margin-bottom: var(--spacing-sm);
+        }
+
+        p {
+          margin-bottom: var(--spacing-md);
+        }
+
+        &.variant-a {
+          background-color: #e3f2fd;
+
+          .btn-default {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            transition: background-color var(--transition-normal);
+
+            &:hover {
+              background-color: var(--primary-color-dark);
+            }
+          }
+        }
+
+        &.variant-b {
+          background-color: #fff3e0;
+
+          .btn-new {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            transition: background-color var(--transition-normal);
+
+            &:hover {
+              background-color: var(--secondary-color-dark);
+            }
+          }
+        }
+      }
+
+      .explanation {
+        margin-top: var(--spacing-md);
+        font-size: var(--font-size-sm);
+        color: var(--text-color);
+        font-style: italic;
+      }
+    }
+  }
+
+  .testing-notes {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+
+    h3 {
+      margin-bottom: var(--spacing-md);
+    }
+
+    .comparison-table {
+      display: flex;
+      gap: var(--spacing-lg);
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      .tool {
+        flex: 1;
+
+        h4 {
+          margin-bottom: var(--spacing-sm);
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            margin-bottom: var(--spacing-xs);
+            padding-left: var(--spacing-sm);
+          }
+        }
+      }
+    }
+  }
+}
